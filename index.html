@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Money Count</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+	
+	<div class="div1">
+		<p class="title">Toilet Counter</p>
+		<p id="Numbers" class="count">Rs.0</p>
+		
+		<p id="people">0 People Entered</p>
+		
+		<a onclick="increment()" class="addButton" id="addButton">ADD +</a>
+		<br>
+		<a onclick="decrement()" class="removeButton" id="removeButton">REMOVE -</a>
+	</div>
+	
+	<script>
+		let count = document.getElementById("Numbers");
+		let addButton = document.getElementById("addButton");
+		let removeButton = document.getElementById("removeButton");
+		let people = document.getElementById("people");
+		let counting = 0 ;
+		let countPeople = 0; 
+		
+		function increment(){
+			counting += 10;
+	  countPeople += 1;
+		  	count.textContent = "Rs." + counting;
+		  	people.textContent = countPeople +" "+ "People Entered";
+		}
+		
+		function decrement(){
+			counting -= 10;
+			countPeople -= 1;
+			count.textContent = "Rs." + counting;
+			people.textContent = countPeople + " " + "People Entered";
+		}
+		
+	</script>
+</body>
+</html>
